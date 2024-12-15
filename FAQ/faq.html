@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Project Infrastructure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq">
+            <h2 onclick="toggleAnswer(this)">1. What is the objective of this project?</h2>
+            <p>The objective of this project is to create the infrastructure for a small to medium-sized company.</p>
+        </div>
+
+        <div class="faq">
+            <h2 onclick="toggleAnswer(this)">2. What operating system is being used?</h2>
+            <p>We are using Windows Server 2022 for the server infrastructure.</p>
+        </div>
+
+        <div class="faq">
+            <h2 onclick="toggleAnswer(this)">3. What is OPNSense?</h2>
+            <p>OPNSense is an open-source firewall and routing platform that will be used as a virtual appliance in our infrastructure.</p>
+        </div>
+
+        <div class="faq">
+            <h2 onclick="toggleAnswer(this)">4. How is the network configured?</h2>
+            <p>The network is configured using VLANs and includes a primary server, a backup server, and a firewall.</p>
+        </div>
+
+        <div class="faq">
+            <h2 onclick="toggleAnswer(this)">5. How are users managed in the system?</h2>
+            <p>Users are managed through Active Directory, where we create Organizational Units (OUs) to organize users and resources.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
